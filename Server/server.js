@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", 
+    origin: "https://chat-app-frontend-iswaxy7q9-koyal-meshrams-projects.vercel.app", 
     methods: ["GET", "PUT"],
   },
 });
@@ -32,7 +32,7 @@ io.on("connection", (socket) => {
 });
 
 app.use(cors({
-  origin: "https://realtime-chat-app-iota-blush.vercel.app/",
+  origin: "https://chat-app-frontend-iswaxy7q9-koyal-meshrams-projects.vercel.app",  // Vercel frontend URL
   methods: ["GET", "POST"]
 }));
 
