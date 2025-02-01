@@ -3,7 +3,7 @@ import io from 'socket.io-client'
 import Chat from './Chat'
 import music from './mixkit-tile-game-reveal-960.wav'
 
-const socket = io.connect("http://localhost:1000")
+const socket = io.connect("https://realtime-chat-app-5mlq.onrender.com")
 
 
 const App = () => {
