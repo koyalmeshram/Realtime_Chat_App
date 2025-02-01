@@ -31,7 +31,10 @@ io.on("connection", (socket) => {
   });
 });
 
-app.use(cors());
+app.use(cors({
+  origin: "https://realtime-chat-app-iota-blush.vercel.app/",
+  methods: ["GET", "POST"]
+}));
 
-const PORT = process.env.PORT || 1000;  // Use Render's dynamic port
+const PORT = process.env.PORT || 1000;  
 server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
