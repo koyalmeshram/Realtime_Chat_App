@@ -36,5 +36,9 @@ app.use(cors({
   methods: ["GET", "POST"]
 }));
 
+app.get("/", (req, res) => {
+  res.send("Backend server is running");
+});
+
 const PORT = process.env.PORT || 1000;  
 server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
